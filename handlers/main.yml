@@ -3,10 +3,10 @@
 
 - name: 'start nexus'
   sudo: yes
-  service: name=nexus state=started
+  systemd: name=nexus state=started
   tags:
     - init
 
 - name: 'restart nexus'
   sudo: yes
-  service: name=nexus state=restarted
+  systemd: name=nexus state=restarted
